@@ -1,20 +1,22 @@
 /*global $, jQuery, alert*/
-$(document).ready(function() {
 
+var classProject = ['.popup-img',
+  '.popup-img-bigc', '.popup-img-bbtec',
+  '.popup-img-tot', '.popup-img-planb'];
+$(document).ready(function () {
   'use strict';
-
-  // ========================================================================= //
-  //  //SMOOTH SCROLL
-  // ========================================================================= //
-
-
+  fetch("json/pathFile.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
   $(document).on("scroll", onScroll);
 
-  $('a[href^="#"]').on('click', function(e) {
+  $('a[href^="#"]').on('click', function (e) {
     e.preventDefault();
     $(document).off("scroll");
 
-    $('a').each(function() {
+    $('a').each(function () {
       $(this).removeClass('active');
       if ($(window).width() < 768) {
         $('.nav-menu').slideUp();
@@ -24,12 +26,12 @@ $(document).ready(function() {
     $(this).addClass('active');
 
     var target = this.hash,
-        menu = target;
+      menu = target;
 
     target = $(target);
     $('html, body').stop().animate({
       'scrollTop': target.offset().top - 80
-    }, 500, 'swing', function() {
+    }, 500, 'swing', function () {
       window.location.hash = target.selector;
       $(document).on("scroll", onScroll);
     });
@@ -39,7 +41,7 @@ $(document).ready(function() {
   function onScroll(event) {
     if ($('.home').length) {
       var scrollPos = $(document).scrollTop();
-      $('nav ul li a').each(function() {
+      $('nav ul li a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
       });
@@ -51,9 +53,9 @@ $(document).ready(function() {
   // ========================================================================= //
 
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll > 200 ) {
+    if (scroll > 200) {
       $("#main-nav, #main-nav-subpage").slideDown(700);
       $("#main-nav-subpage").removeClass('subpage-nav');
     } else {
@@ -67,7 +69,7 @@ $(document).ready(function() {
   //  // RESPONSIVE MENU
   // ========================================================================= //
 
-  $('.responsive').on('click', function(e) {
+  $('.responsive').on('click', function (e) {
     $('.nav-menu').slideToggle();
   });
 
@@ -77,11 +79,11 @@ $(document).ready(function() {
 
   var typed = $(".typed");
 
-  $(function() {
+  $(function () {
     typed.typed({
-      strings: ["Alex Smith.", "Designer.", "Developer.", "Freelancer.", "Photographer"],
-      typeSpeed: 100,
-      loop: true,
+      strings: ["I'm Tirapong Srikasem."],
+      typeSpeed: 150,
+      // loop: true,
     });
   });
 
@@ -92,21 +94,22 @@ $(document).ready(function() {
 
 
   $('.services-carousel').owlCarousel({
-      autoplay: true,
-      loop: true,
-      margin: 20,
-      dots: true,
-      nav: false,
-      responsiveClass: true,
-      responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 } }
-    });
+    autoplay: true,
+    loop: true,
+    margin: 20,
+    dots: true,
+    nav: false,
+    responsiveClass: true,
+    responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 } }
+  });
 
   // ========================================================================= //
   //  magnificPopup
   // ========================================================================= //
 
-  var magnifPopup = function() {
-    $('.popup-img').magnificPopup({
+  var magnifPopup = function () {
+
+    classProject.forEach(element => $(element).magnificPopup({
       type: 'image',
       removalDelay: 300,
       mainClass: 'mfp-with-zoom',
@@ -119,16 +122,16 @@ $(document).ready(function() {
         duration: 300, // duration of the effect, in milliseconds
         easing: 'ease-in-out', // CSS transition easing function
 
-        // The "opener" function should return the element from which popup will be zoomed in
-        // and to which popup will be scaled down
-        // By defailt it looks for an image tag:
-        opener: function(openerElement) {
-          // openerElement is the element on which popup was initialized, in this case its <a> tag
-          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        opener: function (openerElement) {
           return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
       }
-    });
+    }));
+
+
+
+
+
   };
 
 
@@ -140,14 +143,14 @@ $(document).ready(function() {
 // ========================================================================= //
 //  Porfolio isotope and filter
 // ========================================================================= //
-$(window).load(function(){
+$(window).load(function () {
 
   var portfolioIsotope = $('.portfolio-container').isotope({
     itemSelector: '.portfolio-thumbnail',
     layoutMode: 'fitRows'
   });
 
-  $('#portfolio-flters li').on( 'click', function() {
+  $('#portfolio-flters li').on('click', function () {
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 

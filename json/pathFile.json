@@ -1,0 +1,97 @@
+{
+  "bigc": [
+    {
+      "path": "images/portfolio/BigC/B2.png"
+    },
+    {
+      "path": "images/portfolio/BigC/B3.png"
+    },
+    {
+      "path": "images/portfolio/BigC/B4.png"
+    },
+    {
+      "path": "images/portfolio/BigC/B5.png"
+    },
+    {
+      "path": "images/portfolio/BigC/B6.png"
+    }
+  ],
+  "tot": [
+    {
+      "path": "images/portfolio/TOT/T2.png"
+    },
+    {
+      "path": "images/portfolio/TOT/T3.png"
+    },
+    {
+      "path": "images/portfolio/TOT/T4.png"
+    },
+    {
+      "path": "images/portfolio/TOT/T5.png"
+    }
+  ],
+  "bbtec": [
+    {
+      "path": "images/portfolio/ProjectControl/P2.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P3.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P4.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P5.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P6.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P7.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P8.png"
+    },
+    {
+      "path": "images/portfolio/ProjectControl/P9.png"
+    }
+  ],
+  "planb": [
+    {
+      "path": "images/portfolio/PlanB/PB2.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB3.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB4.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB5.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB6.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB7.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB8.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB9.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB10.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB11.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB12.png"
+    },
+    {
+      "path": "images/portfolio/PlanB/PB13.png"
+    }
+  ]
+}
